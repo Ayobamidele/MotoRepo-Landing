@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoRepo | Buy and sell car parts</title>
+    <meta name="description"
+        content="Your trusted marketplace for quality car parts. Buy and sell engines, accessories, and car parts securely. Joined the MotoRepo waitlist today.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://motorepo.com.ng/">
+    <meta property="og:title" content="MotoRepo | Buy and sell car parts">
+    <meta property="og:description"
+        content="Your trusted marketplace for quality car parts. Buy and sell engines, accessories, and components securely.">
+    <meta property="og:image" content="hero-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://motorepo.com.ng/">
+    <meta property="twitter:title" content="MotoRepo | Buy and sell car parts">
+    <meta property="twitter:description"
+        content="Your trusted marketplace for quality car parts. Buy and sell engines, accessories, and components securely.">
+    <meta property="twitter:image" content="hero-image.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="MotoRepo">
+            </a>
+            <div class="nav-social" id="openWaitlist">
+                Join our Waitlist
+            </div>
+
+
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-image fade-in">
+                <div class="image-wrapper">
+                    <img src="hero-image.jpg" alt="MotoRepo Car Parts" class="app-screen">
+                    <div class="glow-effect"></div>
+                </div>
+            </div>
+            <div class="hero-text slide-up">
+                <h1>Got Spare Parts?<br> <span class="highlight">Sell Them!</span></h1>
+                <p>MotoRepo is the marketplace for car enthusiasts to buy and sell engines, accessories, and car parts
+                    securely and with
+                    delivery you can trust.</p>
+            </div>
+        </div>
+    </header>
+
+
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-col slide-up">
+                <img src="logo.png" alt="MotoRepo" class="footer-logo">
+                <p>Buy and sell car parts securely.</p>
+                <p>&copy; 2026 MotoRepo Ltd</p>
+            </div>
+            <div class="footer-col slide-up">
+                <h4>Marketplace</h4>
+                <a href="https://www.notion.so/motorepo/How-it-Works-2fd11fe1afc38001a644fdb5d583a7aa"
+                    target="_blank">How to buy</a>
+                <a href="https://www.notion.so/motorepo/How-it-Works-2fd11fe1afc38001a644fdb5d583a7aa"
+                    target="_blank">How to sell</a>
+                <a href="https://www.notion.so/motorepo/Buyers-Protection-2fd11fe1afc38086904ec818fffe3463"
+                    target="_blank">Buyer Protection</a>
+                <a href="https://www.notion.so/motorepo/Seller-Protection-2fd11fe1afc3805686bbfedce538eb0f"
+                    target="_blank">Seller Protection</a>
+            </div>
+            <div class="footer-col slide-up">
+                <h4>Support</h4>
+                <a href="mailto:support@motorepo.com">support@motorepo.com</a>
+                <a href="tel:+2348164805831">+234 816 480 5831</a>
+            </div>
+            <div class="footer-col slide-up">
+                <h4>Company</h4>
+                <a href="https://www.notion.so/motorepo/MotoRepo-Guidelines-2fd11fe1afc3803b9688c75f5b1ce635"
+                    target="_blank">MotoRepo Guidelines</a>
+                <a href="https://www.notion.so/motorepo/Privacy-Policy-2fd11fe1afc38052814dc27d22cd8dba#2fd11fe1afc380a193cfdfc9100f8a52"
+                    target="_blank">Privacy Policy</a>
+                <a href="https://www.notion.so/motorepo/Terms-Of-Service-2fd11fe1afc380bb9445d38bb81b69a9"
+                    target="_blank">Terms of Use</a>
+            </div>
+            <div class="footer-col slide-up">
+                <h4>Follow us</h4>
+                <a href="https://www.instagram.com/motorepo_ng" target="_blank">Instagram</a>
+                <a href="https://x.com/motorepo_ng" target="_blank">X (Twitter)</a>
+                <a href="https://www.tiktok.com/@motorepo_ng" target="_blank">TikTok</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Waitlist Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <div id="modalInitial">
+                <h2>Join the Waitlist</h2>
+                <p>Be the first to know when MotoRepo launches and get exclusive early-access perks.</p>
+                <form class="modal-form" id="waitlistForm">
+                    <input type="email" placeholder="Enter your email" required id="userEmail">
+                    <button type="submit">Join Now</button>
+                </form>
+            </div>
+            <div class="success-message" id="modalSuccess">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🎉</div>
+                <h3>Successfully entered!</h3>
+                <p>We've added your email to our private waitlist. We'll be in touch soon with some exciting updates.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Scroll Animation Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animation classes
+        document.querySelectorAll('.fade-in, .slide-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add initial visible class to hero elements for immediate animation
+        setTimeout(() => {
+            document.querySelectorAll('.hero .fade-in, .hero .slide-up').forEach(el => {
+                el.classList.add('visible');
+            });
+        }, 100);
+
+        // Navbar scroll logic
+        let lastScroll = 0;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll <= 0) {
+                navbar.classList.remove('nav-hidden');
+                return;
+            }
+
+            if (currentScroll > lastScroll && !navbar.classList.contains('nav-hidden')) {
+                // Scroll down - hide
+                navbar.classList.add('nav-hidden');
+            } else if (currentScroll < lastScroll && navbar.classList.contains('nav-hidden')) {
+                // Scroll up - show
+                navbar.classList.remove('nav-hidden');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Modal Logic
+        const openBtn = document.getElementById('openWaitlist');
+        const overlay = document.getElementById('modalOverlay');
+        const closeBtn = document.getElementById('closeModal');
+        const form = document.getElementById('waitlistForm');
+        const initialContent = document.getElementById('modalInitial');
+        const successContent = document.getElementById('modalSuccess');
+
+        openBtn.addEventListener('click', () => {
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+
+        const closeModal = () => {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+            // Reset modal after short delay
+            setTimeout(() => {
+                initialContent.style.display = 'block';
+                successContent.classList.remove('active');
+                form.reset();
+            }, 300);
+        };
+
+        closeBtn.addEventListener('click', closeModal);
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) closeModal();
+        });
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const emailInput = document.getElementById('userEmail');
+            const email = emailInput.value.trim();
+            const submitBtn = form.querySelector('button');
+            const originalBtnText = submitBtn.innerText;
+
+            // Simple Email Regex Validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email)) {
+                emailInput.style.borderColor = '#dc2626';
+                emailInput.style.backgroundColor = '#fff5f5';
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            // Reset styles if valid
+            emailInput.style.borderColor = '';
+            emailInput.style.backgroundColor = '';
+
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Joining...';
+
+            const dateTime = new Date().toLocaleString();
+
+            fetch('https://sheetdb.io/api/v1/0secni0nm99b9', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    data: [
+                        {
+                            'dateTime': dateTime,
+                            'email': email,
+                        }
+                    ]
+                })
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log('Success:', data);
+                    // Hide form, show success
+                    initialContent.style.display = 'none';
+                    successContent.classList.add('active');
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    alert('Connection error. Please try again.');
+                })
+                .finally(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = originalBtnText;
+                });
+        });
+    </script>
+
+</body>
+
+</html>
