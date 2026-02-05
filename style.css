@@ -6,7 +6,7 @@
     --accent: #f59e0b;
     /* Amber/Gold for automotive accents */
     --bg-dark: #1a1a1a;
-    --bg-light: #fff8e8;
+    --bg-light: #fbf4e4;
     /* Beige/cream background */
     --text-main: #0a2140;
     /* Dark brown for text */
@@ -106,6 +106,10 @@ a {
 
 .nav-social:hover {
     background: var(--primary-dark);
+}
+
+.nav-social:active {
+    transform: scale(0.95);
 }
 
 .logo {
@@ -243,6 +247,7 @@ a {
     border: none;
     background: transparent;
     height: auto;
+    mix-blend-mode: multiply;
 }
 
 .glow-effect {
@@ -425,6 +430,47 @@ a {
 
     .footer-content {
         grid-template-columns: 1fr;
+    }
+
+    /* Mobile refined padding */
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .navbar {
+        height: 70px;
+    }
+
+    .nav-social {
+        padding: 0.4rem 0.9rem;
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+
+    .modal-content {
+        padding: 2.5rem 1.25rem;
+        width: 92%;
+        border-radius: 24px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .close-modal {
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .nav-social {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.75rem;
+    }
+
+    .logo img {
+        height: 32px;
     }
 }
 
