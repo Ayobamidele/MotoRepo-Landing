@@ -1,3 +1,19 @@
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('../fonts/space-grotesk-400.ttf') format('truetype');
+    font-weight: 300 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('../fonts/space-grotesk-700.ttf') format('truetype');
+    font-weight: 600 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --primary: #dc2626;
     /* Red-600 */
@@ -25,13 +41,17 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-main);
     background-color: var(--bg-light);
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
-    scroll-behavior: smooth;
 }
 
 /* Scroll Animation Classes */
@@ -72,13 +92,12 @@ a {
 /* Navbar */
 .navbar {
     height: var(--nav-height);
-    background: var(--bg-light);
-    position: fixed;
+    background: transparent;
+    position: absolute;
     top: 0;
     width: 100%;
     z-index: 1000;
     border-bottom: none;
-    transition: transform 0.3s ease-in-out;
 }
 
 .navbar.nav-hidden {
@@ -184,6 +203,7 @@ a {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    scroll-snap-align: start;
 }
 
 /* Remove background shapes for clean look */
@@ -235,6 +255,7 @@ a {
 
 .image-wrapper {
     position: relative;
+    overflow: visible;
 }
 
 .app-screen {
@@ -258,6 +279,11 @@ a {
 .features {
     padding: 6rem 0;
     background: var(--bg-light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-snap-align: start;
 }
 
 .section-header {
@@ -309,6 +335,11 @@ a {
     background: var(--white);
     padding: 5rem 0 2rem;
     border-top: 1px solid #e2e8f0;
+    min-height: 100vh;
+    /* Match the slide style */
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
 }
 
 .footer-content {
@@ -329,9 +360,11 @@ a {
     margin-bottom: 1rem;
 }
 
-.footer-col h4 {
+.footer-col h2 {
     margin-bottom: 1.5rem;
     color: var(--text-main);
+    font-size: 1.1rem;
+    /* Keeping it small but semantically correct */
 }
 
 .footer-col a {

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fbf4e4">
     <title>MotoRepo | Source Quality Car Parts Securely</title>
     <meta name="description"
         content="The most reliable marketplace to find and buy quality car parts. Source engines, accessories, and components from verified sellers with secure delivery.">
@@ -14,7 +15,7 @@
     <meta property="og:title" content="MotoRepo | Source Quality Car Parts Securely">
     <meta property="og:description"
         content="The most reliable marketplace to find and buy quality car parts. Source engines, accessories, and components from verified sellers.">
-    <meta property="og:image" content="hero-image.webp">
+    <meta property="og:image" content="assets/images/hero-image.webp">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -22,22 +23,25 @@
     <meta property="twitter:title" content="MotoRepo | Source Quality Car Parts Securely">
     <meta property="twitter:description"
         content="The most reliable marketplace to find and buy quality car parts. Source engines, accessories, and components from verified sellers.">
-    <meta property="twitter:image" content="hero-image.webp">
+    <meta property="twitter:image" content="assets/images/hero-image.webp">
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;900&display=swap"
-        rel="stylesheet">
+    <link rel="preload" href="assets/fonts/space-grotesk-400.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/space-grotesk-700.ttf" as="font" type="font/ttf" crossorigin>
 
-    <link rel="stylesheet" href="style.css">
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="assets/images/hero-image.webp" as="image" type="image/webp" fetchpriority="high">
+    <link rel="preload" href="assets/images/logo.webp" as="image" type="image/webp" fetchpriority="high">
+    <link rel="preload" href="assets/css/style.min.css" as="style">
+
+    <link rel="stylesheet" href="assets/css/style.min.css">
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="favicon_io/site.webmanifest">
-    <link rel="shortcut icon" href="favicon_io/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
 </head>
 
 <body>
@@ -45,7 +49,9 @@
     <nav class="navbar">
         <div class="container nav-content">
             <a href="#" class="logo">
-                <img src="logo.png" alt="MotoRepo">
+                <img src="assets/images/logo.webp"
+                    srcset="assets/images/logo-mobile.webp 320w, assets/images/logo.webp 525w"
+                    sizes="(max-width: 768px) 213px, 525px" alt="MotoRepo" fetchpriority="high" loading="eager">
             </a>
             <div class="nav-social" id="openWaitlist" role="button" tabindex="0">
                 Join Waitlist
@@ -55,33 +61,38 @@
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="container hero-content">
-            <div class="hero-image fade-in">
-                <div class="image-wrapper">
-                    <img src="hero-image.webp" alt="MotoRepo Car Parts" class="app-screen">
-                    <div class="glow-effect"></div>
+    <main>
+        <header class="hero">
+            <div class="container hero-content">
+                <div class="hero-image fade-in">
+                    <div class="image-wrapper">
+                        <img src="assets/images/hero-image.webp"
+                            srcset="assets/images/hero-mobile.webp 640w, assets/images/hero-image.webp 1248w"
+                            sizes="(max-width: 768px) 100vw, 1100px" alt="MotoRepo Car Parts" class="app-screen"
+                            fetchpriority="high" loading="eager">
+                        <div class="glow-effect"></div>
+                    </div>
+                </div>
+                <div class="hero-text slide-up">
+                    <h1>Hard to Find Parts.<br> <span class="highlight">Easy to Buy.</span></h1>
+                    <p>Stop the endless search. Source genuine engines, accessories, and rare components from verified
+                        sellers with delivery you can actually trust.</p>
                 </div>
             </div>
-            <div class="hero-text slide-up">
-                <h1>Hard to Find Parts.<br> <span class="highlight">Easy to Buy.</span></h1>
-                <p>Stop the endless search. Source genuine engines, accessories, and rare components from verified
-                    sellers with delivery you can actually trust.</p>
-            </div>
-        </div>
-    </header>
+        </header>
+    </main>
 
 
 
     <footer class="site-footer">
         <div class="container footer-content">
             <div class="footer-col slide-up">
-                <img src="logo.png" alt="MotoRepo" class="footer-logo">
+                <img src="assets/images/logo.webp" alt="MotoRepo" class="footer-logo">
                 <p>The most reliable marketplace to source car parts.</p>
                 <p>&copy; 2026 MotoRepo Ltd</p>
             </div>
             <div class="footer-col slide-up">
-                <h4>Marketplace</h4>
+                <h2>Marketplace</h2>
                 <a href="https://www.notion.so/motorepo/How-it-Works-2fd11fe1afc38001a644fdb5d583a7aa"
                     target="_blank">How to buy</a>
                 <a href="https://www.notion.so/motorepo/How-it-Works-2fd11fe1afc38001a644fdb5d583a7aa"
@@ -92,12 +103,12 @@
                     target="_blank">Seller Protection</a>
             </div>
             <div class="footer-col slide-up">
-                <h4>Support</h4>
+                <h2>Support</h2>
                 <a href="mailto:support@motorepo.com">support@motorepo.com</a>
                 <a href="tel:+2348164805831">+234 816 480 5831</a>
             </div>
             <div class="footer-col slide-up">
-                <h4>Company</h4>
+                <h2>Company</h2>
                 <a href="https://www.notion.so/motorepo/MotoRepo-Guidelines-2fd11fe1afc3803b9688c75f5b1ce635"
                     target="_blank">MotoRepo Guidelines</a>
                 <a href="https://www.notion.so/motorepo/Privacy-Policy-2fd11fe1afc38052814dc27d22cd8dba#2fd11fe1afc380a193cfdfc9100f8a52"
@@ -106,7 +117,7 @@
                     target="_blank">Terms of Use</a>
             </div>
             <div class="footer-col slide-up">
-                <h4>Follow us</h4>
+                <h2>Follow us</h2>
                 <a href="https://www.instagram.com/motorepo_ng" target="_blank">Instagram</a>
                 <a href="https://x.com/motorepo_ng" target="_blank">X (Twitter)</a>
                 <a href="https://www.tiktok.com/@motorepo_ng" target="_blank">TikTok</a>
@@ -163,26 +174,23 @@
             });
         }, 100);
 
-        // Navbar scroll logic
-        let lastScroll = 0;
+        // Navbar and Hero Scroll Animation
+        const heroImage = document.querySelector('.app-screen');
         const navbar = document.querySelector('.navbar');
 
         window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
+            const scrollPos = window.scrollY;
+            const viewportHeight = window.innerHeight;
+            const scrollPercent = Math.min(scrollPos / viewportHeight, 1);
 
-            if (currentScroll <= 0) {
-                navbar.classList.remove('nav-hidden');
-                return;
+            // Hero Image Scale Animation (0.9 to 1.05)
+            if (heroImage && scrollPercent <= 1) {
+                const scale = 0.9 + (scrollPercent * 0.15);
+                heroImage.style.transform = `scale(${scale})`;
             }
 
-            if (currentScroll > lastScroll && !navbar.classList.contains('nav-hidden')) {
-                // Scroll down - hide
-                navbar.classList.add('nav-hidden');
-            } else if (currentScroll < lastScroll && navbar.classList.contains('nav-hidden')) {
-                // Scroll up - show
-                navbar.classList.remove('nav-hidden');
-            }
-            lastScroll = currentScroll;
+            // Optional: Subtle navbar fade or shadow if needed, 
+            // but following getrensa.com it remains static/absolute at top.
         });
 
         // Modal Logic
